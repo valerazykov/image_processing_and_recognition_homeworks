@@ -1,0 +1,1 @@
+pyinstaller --noconsole --onefile --name "airplane_cemeteries" main.py
