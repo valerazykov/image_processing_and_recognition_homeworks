@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1380</width>
+    <height>844</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Тримино</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>271</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="spacing">
+      <number>7</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>5</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="load_btn">
+       <property name="text">
+        <string>Загрузить изображение</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line1">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="canny_btn">
+       <property name="text">
+        <string>Применить оператор Кэнни</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="canny_thresh1_spin">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="specialValueText">
+        <string/>
+       </property>
+       <property name="prefix">
+        <string>Порог 1: </string>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="canny_thresh2_spin">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Порог 2: </string>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line3">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="hough_lines_btn">
+       <property name="text">
+        <string>Применить преобразование
+Хафа для прямых</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="hough_lines_votes_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Порог голосов: </string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>80</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line4_2">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="segment_btn">
+       <property name="text">
+        <string>Сегментировать фишки</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line4">
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="hough_circles_btn">
+       <property name="text">
+        <string>Применить преобразование
+Хафа для окружностей</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="hough_circles_min_dist_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Минимальное расстояние: </string>
+       </property>
+       <property name="minimum">
+        <number>0</number>
+       </property>
+       <property name="maximum">
+        <number>150</number>
+       </property>
+       <property name="value">
+        <number>6</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="hough_circles_votes_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Порог голосов: </string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>4</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="hough_circles_min_radius_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Минимальный радиус: </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="hough_circles_max_radius_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Максимальный радиус: </string>
+       </property>
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="value">
+        <number>5</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="classify_indentation_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Отступ: </string>
+       </property>
+       <property name="value">
+        <number>3</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSpinBox" name="classify_n_ignore_points_spin">
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="prefix">
+        <string>Порог игнорирования: </string>
+       </property>
+       <property name="value">
+        <number>1</number>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="classify_btn">
+       <property name="text">
+        <string>Классифицировать фишки</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="Line" name="v_line_user_input">
+    <property name="geometry">
+     <rect>
+      <x>261</x>
+      <y>2</y>
+      <width>20</width>
+      <height>821</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="h_line_user_input">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>813</y>
+      <width>271</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+    <property name="lineWidth">
+     <number>3</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="image_label">
+    <property name="geometry">
+     <rect>
+      <x>275</x>
+      <y>12</y>
+      <width>1094</width>
+      <height>820</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>pictures/3.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
