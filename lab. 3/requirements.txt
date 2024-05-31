@@ -1,0 +1,9 @@
+matplotlib
+networkx
+numpy
+opencv_python
+PyQt5
+scikit_image
+scipy
+setuptools
+sknw

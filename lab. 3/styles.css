@@ -1,0 +1,95 @@
+/* Стили для главного окна */
+QMainWindow {
+    background-color: #f8f9fa;
+    border: 2px solid #ced4da;
+    border-radius: 10px;
+}
+
+/* Стили для кнопок */
+QPushButton {
+    background-color: #007bff; /* Цвет кнопок */
+    color: white; /* Цвет текста кнопок */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 15px;
+}
+
+QPushButton:hover {
+    background-color: #0056b3; /* Измененный цвет при наведении */
+}
+
+
+/* Стили для QLineEdit */
+QLineEdit {
+    background-color: #ffffff; /* Цвет фона */
+    border: 2px solid #ced4da; /* Граница */
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+/* Стили для QLabel */
+QLabel {
+    color: #495057; /* Цвет текста */
+}
+
+/* Стили для QSpinBox */
+QSpinBox {
+    background-color: #ffffff; /* Цвет фона */
+    border: 2px solid #ced4da; /* Граница */
+    border-radius: 5px;
+    padding: 5px;
+    min-width: 70px; /* Минимальная ширина */
+}
+
+/* Стили для QSpinBox кнопок */
+QSpinBox::up-button, QSpinBox::down-button {
+    width: 25px;
+}
+
+/* Стили для горизонтальных линий */
+QFrame[frameShape="1"] {
+    border: 2px solid #adb5bd; /* Цвет горизонтальной линии */
+}
+
+/* Стили для вертикальных линий */
+QFrame[frameShape="0"] {
+    border: 2px solid #adb5bd; /* Цвет вертикальной линии */
+}
+
+/* Стили для кнопок QFileDialog */
+QPushButton#qt_calendar_navigationbar, QPushButton#qt_calendar_prevmonth, QPushButton#qt_calendar_nextmonth {
+    background-color: transparent; /* Прозрачный цвет фона */
+    border: none; /* Без границ */
+    color: #007bff; /* Цвет текста */
+    padding: 5px;
+}
+
+/* Стили для заголовка окна QFileDialog */
+QLabel#qt_calendar_label {
+    color: #007bff; /* Цвет текста */
+}
+
+
+
+
+/* Добавляем анимацию при наведении на кнопки */
+QPushButton:hover {
+    background-color: #0056b3;
+}
+
+/* Добавляем анимацию при нажатии на кнопки */
+QPushButton:pressed {
+    background-color: #003459;
+}
+
+/* Изменяем цвет фона для QLabel */
+QLabel {
+    background-color: transparent;
+}
+
+/* Изменяем цвет фона для QLineEdit */
+QLineEdit {
+    background-color: #f2f2f2;
+}
